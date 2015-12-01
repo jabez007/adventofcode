@@ -1,0 +1,14 @@
+services:
+  m:
+    build: .
+    platform: linux/amd64
+    working_dir: /work/day01
+    volumes:
+      - type: bind
+        source: .
+        target: /work
+        read_only: true
+    network_mode: none
+    init: true
+    stdin_open: true
+    tty: true
